@@ -1,16 +1,17 @@
 import express from "express";
+const app = express();
+import cors from "cors";
+import multer from "multer";
+import cookieParser from "cookie-parser";
 import authRoutes from "./routes/auth.js";
 import userRoutes from "./routes/users.js";
 import postRoutes from "./routes/posts.js";
 import commentRoutes from "./routes/comments.js";
 import likeRoutes from "./routes/likes.js";
 import relationshipRoutes from "./routes/relationships.js";
-import cors from "cors";
-import multer from "multer";
-import cookieParser from "cookie-parser";
 
 
-const app = express();
+
 
 //middlewares
 app.use((req, res, next) => {
